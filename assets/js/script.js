@@ -46,23 +46,23 @@ let content1 = `
                   <a
                     class="h4 nav-link py-3 px-4 rounded d-inline-block "
                     aria-current="page"
-                    href="/index.html">Home</a>
+                    href="index.html">Home</a>
                 </li>
                 <li class="nav-item navItems rounded ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="/movies&shows.html">Movies <span>&</span>
+                    href="movies&shows.html">Movies <span>&</span>
                     Shows</a>
                 </li>
                 <li class="nav-item navItems rounded  ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="/support.html  ">Support</a>
+                    href="support.html  ">Support</a>
                 </li>
                 <li class="nav-item navItems rounded  ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="/subscription.html">Subscription</a>
+                    href="subscription.html">Subscription</a>
                 </li>
               </ul>
             </div>

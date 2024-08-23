@@ -30,7 +30,7 @@ let content1 = `
           class="col-6 col-md-6 col-lg-2 d-flex justify-content-center justify-content-sm-start align-content-center">
           <!-- logo -->
           <a class="navbar-brand" href="#"><img
-              src="/assets/img/logo.png"
+              src="assets/img/logo.png"
               alt="logo"
               width="114" height="114" />
    
@@ -115,7 +115,7 @@ let content1 = `
           <!-- sidebar header -->
           <div class="offcanvas-header text-white p-2">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="/assets/img/logo.png" alt="logo" width="114" height="114" />
+              <img src="assets/img/logo.png" alt="logo" width="114" height="114" />
             </h5>
   
             <button

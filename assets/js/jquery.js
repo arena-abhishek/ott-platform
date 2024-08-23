@@ -29,12 +29,6 @@ $(document).ready(function () {
 /* movies and shows hero section touch swiping */
 
 /* navigation bar  */
-/* $(document).ready(function () {
-  $(".navItems").click(function () {
-    $(".navItems").removeClass("active");
-    $(this).addClass("active");
-  });
-}); */
 
 $(document).ready(function () {
   var currentPage = window.location.pathname;
@@ -140,5 +134,37 @@ $(document).ready(function () {
         },
       }
     );
+  });
+});
+
+/* category card */
+$(document).ready(function () {
+  $(".category-card-wrapper").owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    autoplay: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+      },
+      600: {
+        items: 2,
+        nav: false,
+        margin:5,
+      },
+      1000: {
+        items: 3,
+        nav: true,
+        loop: false,
+      },
+      1030: {
+        items: 4,
+        nav: true,
+        loop: false,
+      },
+    },
   });
 });

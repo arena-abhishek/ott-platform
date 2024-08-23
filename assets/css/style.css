@@ -118,7 +118,7 @@ img {
   margin-top: 150px;
 }
 #subImg {
-  background-image: url(/assets/img/trial.png);
+  background-image: url(assets/img/trial.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 314px;

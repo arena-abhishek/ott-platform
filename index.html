@@ -9,13 +9,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> -->
-    <script src="assets/js/jquery.min.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/owl.carousel.min.js" defer></script>
     <script src="assets/js/priceCard.js" defer></script>
     <script src="assets/js/faq.js" defer></script>
     <script src="assets/js/categoriesCard.js" defer></script>
@@ -96,47 +100,49 @@
     </div>
 
     <!-- explore our categories  -->
-    <div class="categories">
-      <section class="conatainer-fluid mt-5">
-        <div class="container-xxl">
-          <div class="row">
-            <div class="col-12 col-md-8">
-              <div class="row mb-2">
-                <h2 class="text-white">
-                  Explore our wide variety of categories
-                </h2>
-              </div>
-              <div class="row mb-3 mb-sm-0">
-                <h6 style="color: #999">
-                  Whether you're looking for a comedy to make you laugh, a drama
-                  to make you think, or a documentary to learn something new
-                </h6>
-              </div>
-            </div>
-            <div
-              class="col-12 col-md-4 d-flex justify-content-start justify-content-sm-end align-items-center"
-            >
-              <a
-                href="movies&shows.html"
-                class="text-white btn-base fw-5 fs-6 text-center py-2 py-sm-2 px-3 px-sm-4 rounded-2"
-                style="
-                  text-decoration: none;
-                  width: max-content;
-                  height: max-content;
-                "
-                type="button"
-                >More</a
-              >
-            </div>
+
+    <section class="categories container-xxl">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <div class="row mb-2">
+            <h2 class="text-white">Explore our wide variety of categories</h2>
           </div>
-          <div class="row" style="margin-top: 70px; margin-bottom: 100px">
-            <div
-              class="category-card-wrapper owl-carousel owl-theme z-0 d-flex"
-            ></div>
+          <div class="row mb-3 mb-sm-0">
+            <h6 style="color: #999">
+              Whether you're looking for a comedy to make you laugh, a drama to
+              make you think, or a documentary to learn something new
+            </h6>
           </div>
         </div>
-      </section>
-    </div>
+        <div
+          class="col-12 col-md-4 d-flex justify-content-start justify-content-sm-end align-items-center"
+        >
+          <a
+            href="movies&shows.html"
+            class="text-white btn-base fw-5 fs-6 text-center py-2 py-sm-2 px-3 px-sm-4 rounded-2"
+            style="
+              text-decoration: none;
+              width: max-content;
+              height: max-content;
+            "
+            type="button"
+            >More</a
+          >
+        </div>
+      </div>
+      <div
+        class="siwper catSwiper d-none d-sm-block"
+        style="margin-top: 70px; margin-bottom: 100px"
+      >
+        <div class="category-card-wrapper swiper-wrapper  d-flex"></div>
+      </div>
+      <div
+        class="siwper catSwiperMobile d-block d-sm-none"
+        style="margin-top: 70px; margin-bottom: 100px"
+      >
+        <div class="category-card-wrapper swiper-wrapper  d-flex"></div>
+      </div>
+    </section>
 
     <!-- subscription plan -->
     <div class="subsPlan">
@@ -223,5 +229,6 @@
     <div class="subs"></div>
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
+    <!-- <div class="top-btn"></div> -->
   </body>
 </html>

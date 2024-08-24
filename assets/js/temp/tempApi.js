@@ -40,7 +40,7 @@ const showMedia = (data, containerSelector, isTV) => {
           ? "img/image-missing.png"
           : IMGPATH + result.poster_path;
       const cardElement = document.createElement("div");
-      cardElement.classList.add("item");
+      cardElement.classList.add("swiper-slide");
       cardElement.innerHTML = `
       <div
       class="movie-card-small position-relative"
@@ -129,30 +129,67 @@ getMedia(TRENDING_TV_API, ".trending-tv-cards", true); // trending TV shows
 getMedia(TOP_RATED_TV_API, ".top-rated-tv-cards", true); // must watch TV shows
 getMedia(UPCOMING_TV_API, ".upcoming-tv-cards", true); // new TV releases
 
-
-/* category slider */
-$(document).ready(function () {
-  $(".sliderOne").owlCarousel({
+function initSwiper() {
+  // Initialize desktop Swiper
+  var swiper = new Swiper(".mySwiper", {
     loop: true,
-    margin: 10,
-    dots: true,
-    autoplay: true,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
+    slidesPerView: 1,
+    spaceBetween: 10,
 
-        margin: 5,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
-      1000: {
-        items: 3,
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 270,
       },
-      1030: {
-        items: 4,
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 280,
+      },
+      1400: {
+        slidesPerView: 5,
+        spaceBetween: 270,
       },
     },
+  });
+
+  // Initialize mobile Swiper
+  var swiperMobile = new Swiper(".mySwiperMobile", {
+    loop: true,
+    effect: "cards",
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+}
+
+// Call the function to initialize the Swiper instances
+initSwiper();
+
+$(document).ready(function () {
+  // Hide the "Shows" section by default
+  $(".series").hide();
+  // Toggle the visibility of the "Movies" and "Shows" sections when the buttons are clicked
+  $(".mov").click(function () {
+    $(".movies").show();
+    $(".series").hide();
+    $(this).addClass("bg-dark");
+    $(".sho").removeClass("bg-dark");
+  });
+
+  $(".sho").click(function () {
+    $(".movies").hide();
+    $(".series").show();
+    $(this).addClass("bg-dark");
+    $(".mov").removeClass("bg-dark");
   });
 });

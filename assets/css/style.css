@@ -739,3 +739,20 @@ img {
     margin-top: 60%;
   }
 }
+
+/* cards */
+.series {
+  display: none;
+}
+
+/* top to bottom button */
+.top-to-bottom-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+}

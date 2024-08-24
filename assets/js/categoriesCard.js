@@ -30,7 +30,7 @@ const showMovies_img = async (data, genreList) => {
     const genreNames = result.genre_ids.map((id) => genreMap[id]).join(", ");
 
     const cat_cardElement = document.createElement("div");
-    cat_cardElement.classList.add("item");
+    cat_cardElement.classList.add("swiper-slide");
     cat_cardElement.innerHTML = `  
       <div class="category-card">
             <!-- Thumbnail -->
@@ -76,29 +76,43 @@ const getMovies_img = async () => {
 };
 getMovies_img();
 
-/* category card */
-$(document).ready(function () {
-  $(".category-card-wrapper").owlCarousel({
-    loop: true,
-    margin: 10,
-    autoplay: true,
+// Initialize desktop Swiper
+var swiperCat = new Swiper(".catSwiper", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
 
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-
-        margin: 5,
-      },
-      1000: {
-        items: 3,
-      },
-      1030: {
-        items: 4,
-      },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
-  });
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 270,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 280,
+    },
+    1400: {
+      slidesPerView: 5,
+      spaceBetween: 270,
+    },
+  },
+});
+
+// Initialize mobile Swiper
+var swiperMobileCat = new Swiper(".catSwiperMobile", {
+  loop: true,
+  effect: "cards",
+  grabCursor: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });

@@ -356,9 +356,10 @@ let content3 = `<div class="container-xxl rounded-4 position-relative" id="subIm
 mySubscription = makeElement("section", "container-fluid", "", "", content3);
 subscription.append(mySubscription);
 
-/* const cardSlider =document.querySelector("cardSlider");
-let carouselElement = [];
-for (let i=){} */
+/* let topToBtn = document.querySelector(".top-btn");
+let content4 = ' <button class="top-to-bottom-btn">t</button>';
+myTopToBtn = makeElement("div", "", "", "", content4);
+topToBtn.append(myTopToBtn); */
 
 /* search result */
 
@@ -392,7 +393,7 @@ $(document).ready(function () {
 
 /* navigation bar  */
 
-$(document).ready(function () {
+/* $(document).ready(function () {
   var currentPage = window.location.pathname;
   var backgroundColor;
   switch (currentPage) {
@@ -416,18 +417,7 @@ $(document).ready(function () {
   }
 
   $("body").css("background-color", backgroundColor);
-});
-
-/* hero section slider */
-$(document).ready(function () {
-  $(".heroSlider").owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    animateOut: "fadeOut",
-  });
-});
+}); */
 
 /* search icon */
 
@@ -466,3 +456,26 @@ $(document).ready(function () {
     );
   });
 });
+
+/* heroSection slider */
+var heroSwiper = new Swiper(".heroSlider", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
+
+/* top to bottom button */
+/* $(document).ready(function () {
+  $(".top-to-bottom-btn").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(document).height() - $(window).height(),
+      },
+      1000
+    );
+  });
+}); */

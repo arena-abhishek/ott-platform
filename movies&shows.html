@@ -9,16 +9,19 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> -->
-    <script src="assets/js/jquery.min.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/temp/tempApi.js" defer></script>
     <script src="assets/js/script.js" defer></script>
-    <script src="assets/js/owl.carousel.min.js" defer></script>
     <script src="assets/js/searchMoviesAndTv.js" defer></script>
   </head>
 
@@ -28,117 +31,119 @@
 
     <!-- movies & shows hero section -->
     <div class="container-xxl mt-5 position-relative" style="z-index: 0">
-      <div class="owl-carousel heroSlider owl-theme">
-        <div class="item">
-          <img
-            src="assets/img/movies&showsPc.png"
-            alt
-            class="card-img rounded-4 d-none d-sm-block w-100"
-          />
-          <img
-            src="assets/img/movies&showsMobile.png"
-            alt
-            class="card-img rounded-4 d-block d-sm-none w-100"
-          />
-          <div
-            class="heroSection-caption card-img-overlay d-flex justify-content-end flex-column align-items-center mb-3 z-2"
-          >
-            <h1 class="display-6" style="color: #fff">Avengers : EndGame</h1>
-            <p class="d-none d-lg-block" style="color: #999">
-              A fiery young man clashes with an unflinching forest officer in a
-              south Indian village where spirituality, fate and folklore rule
-              the lands.
-            </p>
-            <div class="text-center d-flex justify-content-center">
-              <button
-                class="border-0 rounded btn-base py-1 py-sm-2 px-2 px-sm-3"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Play now</span>
-              </button>
-              <button
-                class="ms-0 ms-sm-4 btn-base border-0 rounded d-none d-sm-block py-1 py-sm-2 px-2 px-sm-3"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Watch Trailer</span>
-              </button>
+      <div class="heroSlider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="/assets/img/movies&showsPc.png"
+              alt
+              class="card-img rounded-4 d-none d-sm-block w-100"
+            />
+            <img
+              src="/assets/img/movies&showsMobile.png"
+              alt
+              class="card-img rounded-4 d-block d-sm-none w-100"
+            />
+            <div
+              class="heroSection-caption card-img-overlay d-flex justify-content-end flex-column align-items-center mb-3 z-2"
+            >
+              <h1 class="display-6" style="color: #fff">Avengers : EndGame</h1>
+              <p class="d-none d-lg-block" style="color: #999">
+                A fiery young man clashes with an unflinching forest officer in
+                a south Indian village where spirituality, fate and folklore
+                rule the lands.
+              </p>
+              <div class="text-center d-flex justify-content-center">
+                <button
+                  class="border-0 rounded btn-base py-1 py-sm-2 px-2 px-sm-3"
+                >
+                  <i class="bi bi-play-fill text-white"></i>
+                  <span class="text-white fw-semibold">Play now</span>
+                </button>
+                <button
+                  class="ms-0 ms-sm-4 btn-base border-0 rounded d-none d-sm-block py-1 py-sm-2 px-2 px-sm-3"
+                >
+                  <i class="bi bi-play-fill text-white"></i>
+                  <span class="text-white fw-semibold">Watch Trailer</span>
+                </button>
+              </div>
             </div>
+            <div class="gradient-background"></div>
           </div>
-          <div class="gradient-background"></div>
-        </div>
-        <div class="item">
-          <img
-            src="assets/img/showsPcPoster.png"
-            alt
-            class="card-img rounded-4 d-none d-sm-block w-100"
-          />
-          <img
-            src="assets/img/showsMobilePoster.png"
-            alt
-            class="card-img rounded-4 d-block d-sm-none w-100"
-          />
-          <div
-            class="heroSection-caption card-img-overlay d-flex justify-content-end flex-column align-items-center mb-3 z-2"
-          >
-            <h1 class="display-6" style="color: #fff">Stranger Things</h1>
-            <p class="d-none d-lg-block" style="color: #999">
-              A fiery young man clashes with an unflinching forest officer in a
-              south Indian village where spirituality, fate and folklore rule
-              the lands.
-            </p>
-            <div class="text-center d-flex justify-content-center">
-              <button
-                class="border-0 btn-base rounded py-1 py-sm-2 px-2 px-sm-3"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Play now</span>
-              </button>
-              <button
-                class="ms-0 ms-sm-4 btn-base border-0 rounded d-none d-sm-block py-1 py-sm-2 px-2 px-sm-3"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Watch Trailer</span>
-              </button>
+          <div class="swiper-slide">
+            <img
+              src="/assets/img/showsPcPoster.png"
+              alt
+              class="card-img rounded-4 d-none d-sm-block w-100"
+            />
+            <img
+              src="/assets/img/showsMobilePoster.png"
+              alt
+              class="card-img rounded-4 d-block d-sm-none w-100"
+            />
+            <div
+              class="heroSection-caption card-img-overlay d-flex justify-content-end flex-column align-items-center mb-3 z-2"
+            >
+              <h1 class="display-6" style="color: #fff">Stranger Things</h1>
+              <p class="d-none d-lg-block" style="color: #999">
+                A fiery young man clashes with an unflinching forest officer in
+                a south Indian village where spirituality, fate and folklore
+                rule the lands.
+              </p>
+              <div class="text-center d-flex justify-content-center">
+                <button
+                  class="border-0 btn-base rounded py-1 py-sm-2 px-2 px-sm-3"
+                >
+                  <i class="bi bi-play-fill text-white"></i>
+                  <span class="text-white fw-semibold">Play now</span>
+                </button>
+                <button
+                  class="ms-0 ms-sm-4 btn-base border-0 rounded d-none d-sm-block py-1 py-sm-2 px-2 px-sm-3"
+                >
+                  <i class="bi bi-play-fill text-white"></i>
+                  <span class="text-white fw-semibold">Watch Trailer</span>
+                </button>
+              </div>
             </div>
+            <div class="gradient-background"></div>
           </div>
-          <div class="gradient-background"></div>
-        </div>
-        <div class="item">
-          <img
-            src="assets/img/moviePcPoster.png"
-            alt
-            class="card-img rounded-4 d-none d-sm-block w-100"
-          />
-          <img
-            src="assets/img/movieMobilePoster.png"
-            alt
-            class="card-img rounded-4 d-block d-sm-none w-100"
-          />
-          <div
-            class="heroSection-caption card-img-overlay d-flex justify-content-end flex-column align-items-center mb-3 z-2"
-          >
-            <h1 class="display-6" style="color: #fff">Kantara</h1>
-            <p class="d-none d-lg-block" style="color: #999">
-              A fiery young man clashes with an unflinching forest officer in a
-              south Indian village where spirituality, fate and folklore rule
-              the lands.
-            </p>
-            <div class="text-center d-flex justify-content-center">
-              <button
-                class="border-0 btn-base rounded py-1 py-sm-2 px-2 px-sm-3"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Play now</span>
-              </button>
-              <button
-                class="ms-0 ms-sm-4 border-0 btn-base rounded d-none d-sm-block py-1 py-sm-2 px-2 px-sm-3"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Watch Trailer</span>
-              </button>
+          <div class="swiper-slide">
+            <img
+              src="/assets/img/moviePcPoster.png"
+              alt
+              class="card-img rounded-4 d-none d-sm-block w-100"
+            />
+            <img
+              src="/assets/img/movieMobilePoster.png"
+              alt
+              class="card-img rounded-4 d-block d-sm-none w-100"
+            />
+            <div
+              class="heroSection-caption card-img-overlay d-flex justify-content-end flex-column align-items-center mb-3 z-2"
+            >
+              <h1 class="display-6" style="color: #fff">Kantara</h1>
+              <p class="d-none d-lg-block" style="color: #999">
+                A fiery young man clashes with an unflinching forest officer in
+                a south Indian village where spirituality, fate and folklore
+                rule the lands.
+              </p>
+              <div class="text-center d-flex justify-content-center">
+                <button
+                  class="border-0 btn-base rounded py-1 py-sm-2 px-2 px-sm-3"
+                >
+                  <i class="bi bi-play-fill text-white"></i>
+                  <span class="text-white fw-semibold">Play now</span>
+                </button>
+                <button
+                  class="ms-0 ms-sm-4 border-0 btn-base rounded d-none d-sm-block py-1 py-sm-2 px-2 px-sm-3"
+                >
+                  <i class="bi bi-play-fill text-white"></i>
+                  <span class="text-white fw-semibold">Watch Trailer</span>
+                </button>
+              </div>
             </div>
+            <div class="gradient-background"></div>
           </div>
-          <div class="gradient-background"></div>
         </div>
       </div>
     </div>
@@ -150,10 +155,16 @@
       <div
         class="p-1 text-white btn-base fw-500 rounded-2 d-flex gap-1 mx-0 mx-sm-4"
       >
-        <div class="border-0 px-4 py-2 text-white bg-dark fw-500 rounded-2">
+        <div
+          class="border-0 px-4 py-2 text-white bg-dark fw-500 rounded-2 mov"
+          style="cursor: pointer"
+        >
           Movies
         </div>
-        <div class="border-0 px-4 py-2 text-white bg-dark fw-500 rounded-2">
+        <div
+          class="border-0 px-4 py-2 text-white fw-500 rounded-2 sho"
+          style="cursor: pointer"
+        >
           Shows
         </div>
       </div>
@@ -162,75 +173,149 @@
     <!-- movies genres -->
 
     <!-- Card Slider Start -->
-
-    <div class="movies">
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Popular</span>
+    <div class="card_slider_desktop d-none d-sm-block">
+      <div class="movies">
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Popular</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper tt"></div>
+          </div>
         </div>
-
-        <div class="owl-carousel sliderOne owl-theme z-0 tt"></div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Trending</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 trending-cards"></div>
+          </div>
+        </div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Top Rated</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 top-rated-cards"></div>
+          </div>
+        </div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Upcoming</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 upcoming-cards"></div>
+          </div>
+        </div>
       </div>
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Trending</span>
+      <div class="series">
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Popular</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 tv"></div>
+          </div>
         </div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Trending</span>
+          </div>
 
-        <div class="owl-carousel sliderOne owl-theme z-0 trending-cards"></div>
-      </div>
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Top Rated</span>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 trending-tv-cards"></div>
+          </div>
         </div>
-
-        <div class="owl-carousel sliderOne owl-theme z-0 top-rated-cards"></div>
-      </div>
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Upcoming</span>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Top Rated</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 top-rated-tv-cards"></div>
+          </div>
         </div>
-
-        <div class="owl-carousel sliderOne owl-theme z-0 upcoming-cards"></div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Upcoming</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper z-0 upcoming-tv-cards"></div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="series">
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Popular</span>
+    <div class="card_slider_mobile d-block d-sm-none">
+      <div class="movies">
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Popular</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper tt"></div>
+          </div>
+        </div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Trending</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 trending-cards"></div>
+          </div>
         </div>
 
-        <div class="owl-carousel sliderOne owl-theme z-0 tv"></div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Top Rated</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 top-rated-cards"></div>
+          </div>
+        </div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Upcoming</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 upcoming-cards"></div>
+          </div>
+        </div>
       </div>
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Trending</span>
+      <div class="series">
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Popular</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 tv"></div>
+          </div>
         </div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Trending</span>
+          </div>
 
-        <div
-          class="owl-carousel sliderOne owl-theme z-0 trending-tv-cards"
-        ></div>
-      </div>
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Top Rated</span>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 trending-tv-cards"></div>
+          </div>
         </div>
-
-        <div
-          class="owl-carousel sliderOne owl-theme z-0 top-rated-tv-cards"
-        ></div>
-      </div>
-      <div class="container-xxl overflow-hidden">
-        <div class="row text-category" style="margin-bottom: 68px">
-          <span class="text-white display-3">Upcoming</span>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Top Rated</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 top-rated-tv-cards"></div>
+          </div>
         </div>
-
-        <div
-          class="owl-carousel sliderOne owl-theme z-0 upcoming-tv-cards"
-        ></div>
+        <div class="container-xxl overflow-hidden z-0 position-relative">
+          <div class="row text-category" style="margin-bottom: 68px">
+            <span class="text-white display-3">Upcoming</span>
+          </div>
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper z-0 upcoming-tv-cards"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Card Slider End -->
 
     <!-- subscription -->
     <div class="subs"></div>

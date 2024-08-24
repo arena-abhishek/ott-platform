@@ -145,7 +145,8 @@ let content1 = `
                   href="index.html">Home</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="movies&shows.html">Movies</a>
+                <a class="nav-link" href="movies&shows.html">Movies and
+                    Shows</a>
               </li>
               <li class="nav-item mx-2">
                 <a class="nav-link" href="support.html">Support</a>
@@ -361,4 +362,107 @@ for (let i=){} */
 
 /* search result */
 
+$(document).ready(function () {
+  /* show details  */
 
+  $(".epsBtn").click(function () {
+    var $fqs = $(this).closest(".container").find(".episodes");
+    $fqs.slideToggle("fast");
+    var $icon = $(this).find("i");
+    if ($icon.hasClass("bi-arrow-down-short")) {
+      $icon.removeClass("bi-arrow-down-short").addClass("bi-arrow-up-short");
+    } else {
+      $icon.removeClass("bi-arrow-up-short").addClass("bi-arrow-down-short");
+    }
+  });
+
+  /* faqs */
+  $(".faqBtn").click(function () {
+    console.log("this is run");
+    var $fqs = $(this).closest(".row").find(".fqs");
+    $fqs.slideToggle("slow");
+    var $icon = $(this).find("i");
+    if ($icon.hasClass("bi-plus")) {
+      $icon.removeClass("bi-plus").addClass("bi-dash");
+    } else {
+      $icon.removeClass("bi-dash").addClass("bi-plus");
+    }
+  });
+});
+
+/* navigation bar  */
+
+$(document).ready(function () {
+  var currentPage = window.location.pathname;
+  var backgroundColor;
+  switch (currentPage) {
+    case "/subscription.html":
+      backgroundColor = "#1a1a1a";
+      break;
+    case "/home.html":
+      backgroundColor = "#1a1a1a";
+      break;
+    case "/movies&shows.html":
+      backgroundColor = "#1a1a1a";
+      break;
+
+    case "/support.html":
+      backgroundColor = "#1a1a1a";
+
+      break;
+
+    default:
+      backgroundColor = "none";
+  }
+
+  $("body").css("background-color", backgroundColor);
+});
+
+/* hero section slider */
+$(document).ready(function () {
+  $(".heroSlider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    animateOut: "fadeOut",
+  });
+});
+
+/* search icon */
+
+$(document).ready(function () {
+  $("#searchInput").hide();
+  $("#searchPanel").hide();
+
+  $(".searchIcon").on("click", function () {
+    $("#searchPanel")
+      .addClass("searchPanelBg")
+      .animate(
+        {
+          width: "toggle",
+          opacity: "toggle",
+        },
+        {
+          duration: 500,
+          easing: "swing",
+          complete: function () {
+            $(this).focus();
+          },
+        }
+      );
+    $("#searchInput").animate(
+      {
+        width: "toggle",
+        opacity: "toggle",
+      },
+      {
+        duration: 500,
+        easing: "swing",
+        complete: function () {
+          $(this).focus();
+        },
+      }
+    );
+  });
+});

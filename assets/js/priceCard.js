@@ -26,7 +26,7 @@ function getCardText(i) {
       return "Get access to exclusive content, including original series and movies, plus additional features like offline viewing.";
 
     case 2:
-      return "Experience the ultimate in entertainment with our elite plan, featuring 4K streaming, Dolby Atmos, and more.";
+      return "Get access to exclusive content, including original series and movies, plus additional features like offline viewing.";
 
     default:
       return "";

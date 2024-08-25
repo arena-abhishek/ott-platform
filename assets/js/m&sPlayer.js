@@ -1,3 +1,49 @@
+function generateReviewCard(reviewData) {
+  return `
+
+    <div class="col-sm-6 mb-3 m-sm-0">
+
+      <div class="card border-0 text-white" style="background-color: #161616">
+
+        <div class="card-body">
+
+          <h5 class="card-title d-flex justify-content-between align-items-center" style="background-color: none">
+
+            ${reviewData.username}
+
+            <div class="rounded-5 px-2 py-2" style="border: 1px solid #2a2a2a; background-color: #202020;">
+
+              ${Array(Math.floor(reviewData.rating))
+                .fill('<span class="star" style="font-size: 15px">★</span>')
+                .join("")}
+
+              <span style="font-size: 15px">${reviewData.rating}</span>
+
+            </div>
+
+          </h5>
+
+          <h6 class="card-subtitle mb-3" style="background-color: none; color: #999">
+
+            From ${reviewData.country}
+
+          </h6>
+
+          <p class="card-text" style="color: #999">
+
+            ${reviewData.reviewText}
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+}
+
 function generateRatingElement(ratingData) {
   return `
 
@@ -28,6 +74,24 @@ function generateGenreElement(genre) {
 
   `;
 }
+
+const reviewData = [
+  {
+    username: "Ankit Roy",
+    rating: 4.5,
+    country: "India",
+    reviewText:
+      "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to thecinemas to watch but had a houseful board so couldn'watch it,",
+  },
+
+  {
+    username: "Jane Doe",
+    rating: 4.2,
+    country: "USA",
+    reviewText:
+      "This movie was recommended to me by a very dear friend who went for the movie by herself. I went to thecinemas to watch but had a houseful board so couldn'watch it,",
+  },
+];
 
 const ratingData = [
   {
@@ -125,10 +189,10 @@ function createGenreSpan(genre) {
 }
 // Your JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-  /*  const reviewCardsContainer = document.getElementById("review-cards");
+  const reviewCardsContainer = document.getElementById("review-cards");
   reviewData.forEach((review) => {
     reviewCardsContainer.innerHTML += generateReviewCard(review);
-  }); */
+  });
 
   const ratingsContainer = document.getElementById("ratings");
   const languagesContainer = document.getElementById("languages");
@@ -209,7 +273,7 @@ const episodes = [
 const episodeListHTML = episodes.map(createEpisodeHTML).join("");
 document.getElementById("episodes-container").innerHTML = episodeListHTML;
 
-const reviewCard = document.querySelector(".review-cards");
+/* const reviewCard = document.querySelector(".review-cards");
 let reviewCardElement = [];
 for (let i = 0; i < 10; i++) {
   reviewCardElement[i] = document.createElement("div");
@@ -266,4 +330,4 @@ for (let i = 0; i < 10; i++) {
 `;
 
   reviewCard.append(reviewCardElement[i]);
-}
+} */

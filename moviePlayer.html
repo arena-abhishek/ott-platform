@@ -16,8 +16,9 @@
       defer
     ></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/m&sPlayer.js" defer></script>
     <script src="assets/js/temp/tempApi.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
     <script src="assets/js/searchMoviesAndTv.js" defer></script>
   </head>
   <body>
@@ -75,7 +76,106 @@
     </div>
     <!-- movie detail -->
     <div class="moviesDetail">
-      <script src="assets/js/movieDetails.js"></script>
+      <section class="container-xxl">
+        <div class="row gx-5">
+          <!-- 1st coulmn -->
+
+          <div class="col-12 col-lg-8 mt-4">
+            <!-- description -->
+
+            <div
+              class="row rounded-3 mb-3 p-2 p-sm-4"
+              style="background-color: #202020"
+            >
+              <div class="text container">
+                <div class="row">
+                  <h6 style="color: #999999">Description</h6>
+                </div>
+                <div class="row">
+                  <p style="color: #ffffff">
+                    A fiery young man clashes with an unflinching forest officer
+                    in a south Indian village where spirituality, fate and
+                    folklore rule the lands.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review container -->
+
+            <div
+              class="row rounded-3 p-1 p-sm-4"
+              style="background-color: #202020"
+            >
+              <div class="review container">
+                <!-- Review button -->
+
+                <div class="row mb-3">
+                  <div class="row">
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-row"
+                    >
+                      <h6 style="color: #999">Reviews</h6>
+
+                      <button
+                        class="btn btn-sm rounded-2 gap-2 d-flex align-items-center"
+                        style="
+                          background-color: #161616;
+                          color: #fff;
+                          border: 2px solid #2a2a2a;
+                        "
+                      >
+                        <i class="bi bi-plus-lg"> </i>
+
+                        <h6>Add Your Reviews</h6>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review cards -->
+                 
+                 <div class="swiper myswiper">
+                   <div class="row mb-3 swiper-wrapper review-cards"></div>
+                 </div>
+
+                <!-- Slider btn -->
+
+                <div class="row d-flex justify-content-center">
+                  <div class="text-center">
+                    <button class="btn">
+                      <span style="font-size: 1.5rem"
+                        ><i class="bi bi-arrow-left text-white"></i
+                      ></span>
+                    </button>
+
+                    <button class="btn">
+                      <span style="font-size: 1.5rem"
+                        ><i class="bi bi-arrow-right text-white"></i
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2nd coulmn -->
+
+          <div class="col-12 col-lg-4 mt-4 mt-sm-0">
+            <div
+              class="row rounded-3 my-4 px-sm-4 px-3 py-sm-3 py-3"
+              style="background-color: #202020"
+            >
+              <div class="row mb-2" id="released-year"></div>
+              <div class="row mb-2" id="available-languages"></div>
+              <div class="row d-flex mb-2" id="languages"></div>
+              <div class="row mb-2" id="ratings"></div>
+              <div class="row mb-3" id="genres"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- card slider -->
@@ -95,30 +195,14 @@
     </div>
 
     <!-- slider -->
-    <div class="container-xxl" id="cardSlider">
-      <div class="row text-category" style="margin-bottom: 68px">
-        <span class="text-white display-3">New Releases</span>
+    <div class="container-xxl mt-5 d-none d-sm-block">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper tt"></div>
       </div>
-      <div id="carouselCardsControls" class="carousel">
-        <div class="carousel-inner carousel-inner-category" id="tt"></div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselCardsControls"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselCardsControls"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    </div>
+    <div class="container-xxl mt-5 d-block d-sm-none">
+      <div class="swiper mySwiperMobile">
+        <div class="swiper-wrapper tt"></div>
       </div>
     </div>
 
@@ -126,5 +210,10 @@
     <div class="subs"></div>
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
+    <div class="bottom-To-Top">
+      <a href="#" class="back-to-top"
+        ><span><i class="bi bi-arrow-up-short"></i></span
+      ></a>
+    </div>
   </body>
 </html>

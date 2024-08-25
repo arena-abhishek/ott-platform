@@ -24,9 +24,37 @@ const TRENDING_TV_API =
 const TOP_RATED_TV_API =
   "https://api.themoviedb.org/3/tv/top_rated?language=en-US&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
+/* genre */
+const GENRE_API =
+  "https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+
+const GENRE_TV_API =
+  "https://api.themoviedb.org/3/genre/tv/list?language=en&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+
+let genreMap = {};
+let tvGenreMap = {};
+
+const getGenre = async () => {
+  const response = await fetch(GENRE_API);
+  const data = await response.json();
+  genreMap = data.genres.reduce((acc, genre) => {
+    acc[genre.id] = genre.name;
+    return acc;
+  }, {});
+  const tvResponse = await fetch(GENRE_TV_API);
+  const tvData = await tvResponse.json();
+  tvGenreMap = tvData.genres.reduce((acc, genre) => {
+    acc[genre.id] = genre.name;
+    return acc;
+  }, {});
+};
+
+getGenre();
+
 const getMedia = async (url, containerSelector, isTV) => {
   const response = await fetch(url);
   const data = await response.json();
+
   showMedia(data, containerSelector, isTV);
 };
 
@@ -39,6 +67,18 @@ const showMedia = (data, containerSelector, isTV) => {
         result.poster_path === null
           ? "img/image-missing.png"
           : IMGPATH + result.poster_path;
+      const genreIds = result.genre_ids;
+
+      const genreName = genreIds
+        .map((id) => {
+          if (isTV) {
+            return tvGenreMap[id];
+          } else {
+            return genreMap[id];
+          }
+        })
+        .filter((name) => name !== undefined)
+        .join(", ");
       const cardElement = document.createElement("div");
       cardElement.classList.add("swiper-slide");
       cardElement.innerHTML = `
@@ -56,7 +96,7 @@ const showMedia = (data, containerSelector, isTV) => {
 
       <!-- Play Button -->
       <a
-        href="https://holaa.codexshaper.com/wp/wp-content/uploads/2024/03/e86032ef-9397-4888-9d12-7246be9d81bb.mp4"
+        href"#"
         class="popup_video video-play-btn position-absolute"
       >
         <svg
@@ -107,7 +147,7 @@ const showMedia = (data, containerSelector, isTV) => {
           </li>
         </ul>
         <ul class="movie-type " style="margin-right: 18px;">
-          <li>Hiking, Drama, Family</li>
+          <li>${genreName}</li>
         </ul>
       </div>
     </div>
@@ -115,6 +155,15 @@ const showMedia = (data, containerSelector, isTV) => {
     `;
 
       card.appendChild(cardElement);
+
+      // Add event listener to video-play-btn
+      const videoPlayBtn = cardElement.querySelector(".video-play-btn");
+      videoPlayBtn.addEventListener("click", (e) => {
+        console.log("click");
+        e.preventDefault();
+        const link = isTV ? "showsPlayer.html" : "moviePlayer.html";
+        window.location.href = link;
+      });
     });
   });
 };
@@ -136,10 +185,10 @@ function initSwiper() {
     slidesPerView: 1,
     spaceBetween: 10,
 
-    autoplay: {
+    /*    autoplay: {
       delay: 3000,
       disableOnInteraction: false,
-    },
+    }, */
     breakpoints: {
       640: {
         slidesPerView: 1,

@@ -5,8 +5,8 @@ const CAT_IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 const CAT_GENRE =
   "https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
-const categories_card = document.querySelector(".category-card-wrapper");
-console.log(categories_card);
+const categoriesCard = document.querySelector(".category-card-wrapper");
+console.log(categoriesCard);
 
 const getGenreList = async () => {
   const response = await fetch(CAT_GENRE);
@@ -20,24 +20,24 @@ const showMovies_img = async (data, genreList) => {
     return acc;
   }, {});
 
-  categories_card.innerHTML = "";
+  categoriesCard.innerHTML = "";
   data.results.forEach((result) => {
-    const imagePath =
+    const image_Path =
       result.poster_path === null
         ? "img/image-missing.png"
         : CAT_IMG_PATH + result.poster_path;
 
     const genreNames = result.genre_ids.map((id) => genreMap[id]).join(", ");
 
-    const cat_cardElement = document.createElement("div");
-    cat_cardElement.classList.add("swiper-slide");
-    cat_cardElement.innerHTML = `  
+    const catCardElement = document.createElement("div");
+    catCardElement.classList.add("swiper-slide");
+    catCardElement.innerHTML = `  
       <div class="category-card">
             <!-- Thumbnail -->
             <div class="thumbnail">
               <img
                 decoding="async"
-                src="${imagePath}"
+                src="${image_Path}"
                 alt="category"
                 class="thumb-img w-100"
               />
@@ -64,7 +64,7 @@ const showMovies_img = async (data, genreList) => {
               </a>
             </div>
           </div>`;
-    categories_card.appendChild(cat_cardElement);
+    categoriesCard.appendChild(catCardElement);
   });
 };
 
@@ -77,42 +77,3 @@ const getMovies_img = async () => {
 getMovies_img();
 
 // Initialize desktop Swiper
-var swiperCat = new Swiper(".catSwiper", {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 10,
-
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-  breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 270,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 280,
-    },
-    1400: {
-      slidesPerView: 5,
-      spaceBetween: 270,
-    },
-  },
-});
-
-// Initialize mobile Swiper
-var swiperMobileCat = new Swiper(".catSwiperMobile", {
-  loop: true,
-  effect: "cards",
-  grabCursor: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-});

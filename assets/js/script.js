@@ -21,6 +21,10 @@ function makeElement(
   return elem;
 }
 
+document.addEventListener('DOMContentLoaded',function(){
+  
+})
+
 let header = document.querySelector(".header");
 let content1 = `
   <div class="container-xxl">
@@ -356,9 +360,9 @@ let content3 = `<div class="container-xxl rounded-4 position-relative" id="subIm
 mySubscription = makeElement("section", "container-fluid", "", "", content3);
 subscription.append(mySubscription);
 
-/* let topToBtn = document.querySelector(".top-btn");
-let content4 = ' <button class="top-to-bottom-btn">t</button>';
-myTopToBtn = makeElement("div", "", "", "", content4);
+/* let topToBtn = document.querySelector(".bottom-to-top");
+let content4 = '<span><i class="bi bi-arrow-up-short"></i></span>';
+myTopToBtn = makeElement("a", "back-to-top", "", "", content4);
 topToBtn.append(myTopToBtn); */
 
 /* search result */
@@ -468,14 +472,3 @@ var heroSwiper = new Swiper(".heroSlider", {
   },
 });
 
-/* top to bottom button */
-/* $(document).ready(function () {
-  $(".top-to-bottom-btn").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: $(document).height() - $(window).height(),
-      },
-      1000
-    );
-  });
-}); */

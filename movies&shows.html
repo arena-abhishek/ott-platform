@@ -20,6 +20,7 @@
       defer
     ></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/temp/carouse.js" defer></script>
     <script src="assets/js/temp/tempApi.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/searchMoviesAndTv.js" defer></script>
@@ -173,9 +174,10 @@
     <!-- movies genres -->
 
     <!-- Card Slider Start -->
-    <div class="card_slider_desktop d-none d-sm-block">
+    <div class="cat-card"></div>
+    <!--   <div class="card_slider_desktop d-none d-sm-block">
       <div class="movies">
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5 ">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Popular</span>
           </div>
@@ -183,7 +185,7 @@
             <div class="swiper-wrapper tt"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Trending</span>
           </div>
@@ -191,7 +193,7 @@
             <div class="swiper-wrapper z-0 trending-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Top Rated</span>
           </div>
@@ -199,7 +201,7 @@
             <div class="swiper-wrapper z-0 top-rated-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Upcoming</span>
           </div>
@@ -209,7 +211,7 @@
         </div>
       </div>
       <div class="series">
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Popular</span>
           </div>
@@ -217,7 +219,7 @@
             <div class="swiper-wrapper z-0 tv"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Trending</span>
           </div>
@@ -226,7 +228,7 @@
             <div class="swiper-wrapper z-0 trending-tv-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Top Rated</span>
           </div>
@@ -234,7 +236,7 @@
             <div class="swiper-wrapper z-0 top-rated-tv-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Upcoming</span>
           </div>
@@ -246,7 +248,7 @@
     </div>
     <div class="card_slider_mobile d-block d-sm-none">
       <div class="movies">
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Popular</span>
           </div>
@@ -254,7 +256,7 @@
             <div class="swiper-wrapper tt"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Trending</span>
           </div>
@@ -263,7 +265,7 @@
           </div>
         </div>
 
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Top Rated</span>
           </div>
@@ -271,7 +273,7 @@
             <div class="swiper-wrapper z-0 top-rated-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Upcoming</span>
           </div>
@@ -281,7 +283,7 @@
         </div>
       </div>
       <div class="series">
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Popular</span>
           </div>
@@ -289,7 +291,7 @@
             <div class="swiper-wrapper z-0 tv"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Trending</span>
           </div>
@@ -298,7 +300,7 @@
             <div class="swiper-wrapper z-0 trending-tv-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Top Rated</span>
           </div>
@@ -306,7 +308,7 @@
             <div class="swiper-wrapper z-0 top-rated-tv-cards"></div>
           </div>
         </div>
-        <div class="container-xxl overflow-hidden z-0 position-relative">
+        <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
           <div class="row text-category" style="margin-bottom: 68px">
             <span class="text-white display-3">Upcoming</span>
           </div>
@@ -315,13 +317,16 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- subscription -->
     <div class="subs"></div>
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
-    <script src="/assets/js/jquery.min.js" defer></script>
-    <script src="/assets/js/owl.carousel.min.js" defer></script>
+    <div class="bottom-To-Top">
+      <a href="#" class="back-to-top"
+        ><span><i class="bi bi-arrow-up-short"></i></span
+      ></a>
+    </div>
   </body>
 </html>

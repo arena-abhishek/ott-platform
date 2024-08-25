@@ -23,6 +23,7 @@
     <script src="assets/js/priceCard.js" defer></script>
     <script src="assets/js/faq.js" defer></script>
     <script src="assets/js/categoriesCard.js" defer></script>
+    <script src="assets/js/temp/tempApi.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/searchMoviesAndTv.js" defer></script>
   </head>
@@ -130,17 +131,15 @@
           >
         </div>
       </div>
-      <div
-        class="siwper catSwiper d-none d-sm-block"
-        style="margin-top: 70px; margin-bottom: 100px"
-      >
-        <div class="category-card-wrapper swiper-wrapper  d-flex"></div>
+      <div class="container-xxl mt-5 d-none d-sm-block position-relative z-0">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper category-card-wrapper z-0"></div>
+        </div>
       </div>
-      <div
-        class="siwper catSwiperMobile d-block d-sm-none"
-        style="margin-top: 70px; margin-bottom: 100px"
-      >
-        <div class="category-card-wrapper swiper-wrapper  d-flex"></div>
+      <div class="container-xxl mt-5 d-block d-sm-none position-relative z-0">
+        <div class="swiper mySwiperMobile">
+          <div class="swiper-wrapper category-card-wrapper z-0"></div>
+        </div>
       </div>
     </section>
 
@@ -229,6 +228,8 @@
     <div class="subs"></div>
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
-    <!-- <div class="top-btn"></div> -->
+    <div class="bottom-To-Top">
+      <a href="#" class="back-to-top"><span><i class="bi bi-arrow-up-short"></i></span></a>
+    </div>
   </body>
 </html>

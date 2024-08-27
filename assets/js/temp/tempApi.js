@@ -178,13 +178,13 @@ getMedia(TRENDING_TV_API, ".trending-tv-cards", true); // trending TV shows
 getMedia(TOP_RATED_TV_API, ".top-rated-tv-cards", true); // must watch TV shows
 getMedia(UPCOMING_TV_API, ".upcoming-tv-cards", true); // new TV releases
 
-function initSwiper() {
+$(document).ready(function () {
   // Initialize desktop Swiper
   var swiper = new Swiper(".mySwiper", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
-       autoplay: {
+    autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
@@ -218,10 +218,8 @@ function initSwiper() {
       disableOnInteraction: false,
     },
   });
-}
+});
 
-// Call the function to initialize the Swiper instances
-initSwiper();
 
 $(document).ready(function () {
   // Hide the "Shows" section by default

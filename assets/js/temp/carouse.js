@@ -76,6 +76,6 @@ const mobileHtml = `
   </div>
 `;
 
-const catCard = document.querySelector(".cat-card");
+const catCard = document.querySelector(".card-slider");
 
 catCard.innerHTML += desktopHtml + mobileHtml;

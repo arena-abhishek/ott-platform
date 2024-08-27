@@ -84,14 +84,14 @@ document.write = `   <section class="container-xxl">
 
         <div class="col-12 col-lg-4 mt-4 mt-sm-0">
           <div
-            class="row rounded-3 my-4 px-sm-4 px-3 py-sm-3 py-3"
+            class="row rounded-3 my-4 px-sm-4 px-3 py-sm-4 py-5"
             style="background-color: #202020"
           >
             <div class="row mb-2" id="released-year"></div>
             <div class="row mb-2" id="available-languages"></div>
             <div class="row d-flex mb-2" id="languages"></div>
             <div class="row mb-2" id="ratings"></div>
-            <div class="row mb-3" id="genres"></div>
+            <div class="row " id="genres"></div>
           </div>
         </div>
       </div>

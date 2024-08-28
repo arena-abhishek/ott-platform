@@ -239,7 +239,6 @@ img {
   overflow: hidden;
 }
 
-
 .movie-card-small:hover .video-play-btn {
   visibility: visible;
   opacity: 1;
@@ -425,7 +424,7 @@ a:active {
 
 /* search icon */
 
-#searchInput {
+.searchInput {
   top: 43px;
   right: 20%;
   width: 233px;
@@ -437,34 +436,46 @@ a:active {
 }
 
 @media (min-width: 1024px) {
-  #searchInput {
+  .searchInput {
     right: 61px;
     top: 104px;
   }
 }
 @media (min-width: 1440px) {
-  #searchInput {
+  .searchInput {
     right: 11%;
     top: 44px;
   }
 }
+@media (min-width: 430px) and (max-width: 770px) {
+  .searchInput {
+    right: 9%;
+    top: 44px;
+  }
+}
+
+@media (max-width: 429px) {
+  .searchInput {
+    right: 9%;
+    top: 100px;
+  }
+}
 @media (min-width: 1900px) {
-  #searchInput {
+  .searchInput {
     right: 20%;
     top: 44px;
   }
 }
 
-#searchInput::placeholder {
+.searchInput::placeholder {
   color: #999;
 }
 
 .searchPanelBg {
-  margin-top: 47px;
   height: 100vh;
   position: absolute;
-  left: 299px;
   z-index: 1;
+  margin-top: 50px;
 }
 
 /* form phone no. */
@@ -750,8 +761,8 @@ img {
 /* back to top button */
 .back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 5rem;
+  right: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -811,4 +822,99 @@ img {
 
 .thirdCard:hover .thirdCardImg {
   transform: scale(1.2);
+}
+
+.navigationMobile {
+  width: 100%;
+  height: 70px;
+  background: #15141f;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+}
+.navigationMobile ul {
+  display: flex;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+.navigationMobile ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.navigationMobile ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigationMobile ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 0.5s;
+  color: #eee;
+}
+.navigationMobile ul li.active a .icon {
+  transform: translateY(-32px);
+}
+.navigationMobile ul li a .text {
+  position: absolute;
+  color: #eee;
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.navigationMobile ul li.active a .text {
+  transform: translateY(10px);
+  opacity: 1;
+}
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%);
+  border-radius: 50%;
+  border: 6px solid;
+  transition: 0.5s;
+}
+.navigationMobile ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+.navigationMobile ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+.navigationMobile ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+.navigationMobile ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+.navigationMobile ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}
+:root {
+  --clr: #222327;
+}
+
+.bg-navItems {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
 }

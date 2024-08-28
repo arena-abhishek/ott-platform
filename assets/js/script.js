@@ -21,9 +21,7 @@ function makeElement(
   return elem;
 }
 
-document.addEventListener('DOMContentLoaded',function(){
-  
-})
+document.addEventListener("DOMContentLoaded", function () {});
 
 let header = document.querySelector(".header");
 let content1 = `
@@ -84,8 +82,7 @@ let content1 = `
                     placeholder="search movie and series "
                     autofocus
                     autocomplete="off"
-                    class="py-1 px-2 position-absolute rounded-3 form-control"
-                    id="searchInput"
+                    class="py-1 px-2 position-absolute rounded-3 form-control searchInput"
                   />
                 </div>
             <a
@@ -96,90 +93,25 @@ let content1 = `
         </div>
         <div
           class="col-6 col-lg-0 d-block d-lg-none d-flex justify-content-end">
-          <!-- toggle btn -->
-          <button
-            class="navbar-toggler shadow-none border-0 d-block d-lg-none"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!-- mobile search -->
+            <div class="row searchIcon text-white" style="cursor: pointer">
+                  <i class="bi bi-search" style="font-size: x-large"></i>
+                  <input
+                    type="search"
+                    placeholder="search movie and series "
+                    autofocus
+                    autocomplete="off"
+                    class="py-1 px-2 position-absolute rounded-3 form-control searchInput"
+                  />
+                </div>   
         </div>
       </div>
-      <div class="row d-block d-lg-none">
-        <!-- sidebar -->
-        <div
-          class="sidebar offcanvas offcanvas-start d-block d-lg-none"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          style=" background-color: #15141f;">
-          <!-- sidebar header -->
-          <div class="offcanvas-header text-white p-2">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="assets/img/logo.png" alt="logo" width="114" height="114" />
-            </h5>
-  
-            <button
-              type="button"
-              class="btn-close btn-close-white shadow-none"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div
-            class="row mt-4"
-            style="
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(
-                  90deg,
-                  rgba(52, 48, 135, 0) 0%,
-                  rgba(52, 48, 135, 1) 17%,
-                  rgba(52, 48, 135, 0) 100%
-                );
-              "></div>
-          <div
-            class="offcanvas-body d-flex flex-column align-items-start">
-            <ul
-              class="navbar-nav d-block d-lg-none fs-5 flex-grow-1 pe-3 rounded">
-              <li class="nav-item mx-2">
-                <a class="nav-link active" aria-current="page"
-                  href="index.html">Home</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="movies&shows.html">Movies and
-                    Shows</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="support.html">Support</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="subscription.html">Subscription</a>
-              </li>
-            </ul>
-          </div>
-          <!-- search & notification -->
-          <!-- 
-          <div class="d-flex justify-content-end align-items-center gap-3">
-            <a href="#search" class="text-white" style="font-size: 25px"
-              ><i class="bi bi-search"></i
-            ></a>
-            <a
-              href="#notificationIcon"
-              class="text-white"
-              style="font-size: 25px"
-              ><i class="bi bi-bell"></i
-            ></a>
-          </div>
-  -->
         </div>
       </div>
     </nav>
   </div>
   <div  id="searchPanel">
-        <div class="mainCardApi container-xxl z-1">
+        <div class="mainCardApi container-fluid z-1">
           <div
             class="row d-flex flex-row justify-content-between"
             id="movie-box"
@@ -360,10 +292,52 @@ let content3 = `<div class="container-xxl rounded-4 position-relative" id="subIm
 mySubscription = makeElement("section", "container-fluid", "", "", content3);
 subscription.append(mySubscription);
 
-/* let topToBtn = document.querySelector(".bottom-to-top");
-let content4 = '<span><i class="bi bi-arrow-up-short"></i></span>';
-myTopToBtn = makeElement("a", "back-to-top", "", "", content4);
-topToBtn.append(myTopToBtn); */
+let mobileNavigation = document.querySelector(".bg-navItems");
+let content4 = `
+<div class="navigationMobile">
+        <ul>
+          <li class="list active">
+            <a href="index.html">
+              <span class="icon">
+                <i class="bi bi-house-door"></i>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="movies&shows.html">
+              <span class="icon">
+                <img src="assets/icons/watch.svg" alt="" />
+              </span>
+              <span class="text">Profile</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="support.html">
+              <span class="icon">
+                <img
+                  src="assets/icons/support.svg"
+                  alt=""
+                  height="32px"
+                  width="32px"
+                />
+              </span>
+              <span class="text">Photos</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="subscription.html">
+              <span class="icon">
+                <img src="assets/icons/subscription.svg" alt="" />
+              </span>
+              <span class="text">Settings</span>
+            </a>
+          </li>
+          <div class="indicator"></div>
+        </ul>
+      </div>`;
+myMobileNavigation = makeElement("section", "", "", "", content4);
+mobileNavigation.append(myMobileNavigation);
 
 /* search result */
 
@@ -397,36 +371,10 @@ $(document).ready(function () {
 
 /* navigation bar  */
 
-/* $(document).ready(function () {
-  var currentPage = window.location.pathname;
-  var backgroundColor;
-  switch (currentPage) {
-    case "/subscription.html":
-      backgroundColor = "#1a1a1a";
-      break;
-    case "/home.html":
-      backgroundColor = "#1a1a1a";
-      break;
-    case "/movies&shows.html":
-      backgroundColor = "#1a1a1a";
-      break;
-
-    case "/support.html":
-      backgroundColor = "#1a1a1a";
-
-      break;
-
-    default:
-      backgroundColor = "none";
-  }
-
-  $("body").css("background-color", backgroundColor);
-}); */
-
 /* search icon */
 
 $(document).ready(function () {
-  $("#searchInput").hide();
+  $(".searchInput").hide();
   $("#searchPanel").hide();
 
   $(".searchIcon").on("click", function () {
@@ -445,7 +393,7 @@ $(document).ready(function () {
           },
         }
       );
-    $("#searchInput").animate(
+    $(".searchInput").animate(
       {
         width: "toggle",
         opacity: "toggle",
@@ -472,3 +420,10 @@ var heroSwiper = new Swiper(".heroSlider", {
   },
 });
 
+/* moile view nav items */
+const list = document.querySelectorAll(".list");
+function activeLink() {
+  list.forEach((item) => item.classList.remove("active"));
+  this.classList.add("active");
+}
+list.forEach((item) => item.addEventListener("click", activeLink));

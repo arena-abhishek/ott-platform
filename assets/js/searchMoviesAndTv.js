@@ -29,7 +29,7 @@ const showMovies = (data) => {
     box.innerHTML = `
         <div
       class="movie-card-small position-relative"
-      style="width: 300px; margin-right: 30px"
+      style="width: 300px; height:300px; margin-right: 30px"
     >
       <!-- Card Thumbnail -->
       <img
@@ -108,7 +108,7 @@ const showMovies = (data) => {
 };
 
 document
-  .querySelector("#searchInput")
+  .querySelector(".searchInput")
   .addEventListener("keyup", function (event) {
     if (event.target.value != "") {
       getMovies(SEARCHAPI + event.target.value);

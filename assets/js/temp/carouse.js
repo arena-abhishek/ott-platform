@@ -1,10 +1,10 @@
 function generateCategoryHtml(categoryName, className) {
   return `
     <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
-      <div class="row text-category" style="margin-bottom: 68px">
-        <span class="text-white display-3">${categoryName}</span>
+      <div class="row text-category" style="margin-bottom: 30px">
+        <span class="text-white display-5">${categoryName}</span>
       </div>
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper mb-5">
         <div class="swiper-wrapper z-0 ${className}"></div>
       </div>
     </div>
@@ -13,11 +13,11 @@ function generateCategoryHtml(categoryName, className) {
 
 function generateMobileCategoryHtml(categoryName, className) {
   return `
-    <div class="container-xxl overflow-hidden z-0 position-relative mt-5">
-      <div class="row text-category" style="margin-bottom: 68px">
-        <span class="text-white display-3">${categoryName}</span>
+    <div class="container-xxl overflow-hidden z-0 position-relative mt-5 ">
+      <div class="row text-category" style="margin-bottom: 20px">
+        <span class="text-white display-5">${categoryName}</span>
       </div>
-      <div class="swiper mySwiperMobile">
+      <div class="swiper mySwiperMobile mb-5">
         <div class="swiper-wrapper z-0 ${className}"></div>
       </div>
     </div>

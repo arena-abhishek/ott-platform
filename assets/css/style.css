@@ -7,11 +7,12 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
 }
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"); */
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
 body {
   background-color: #15141f !important;
   margin: 0;
@@ -32,10 +33,10 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-family: "open-sans", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 p {
-  font-family: "Open-sans", sans-serif;
+  font-family: "", sans-serif;
 }
 
 a {
@@ -153,6 +154,9 @@ img {
 .subsPlan {
   margin-top: 150px;
 }
+.subscripPlan {
+  margin-top: 50px;
+}
 
 .btn1 {
   background-color: #202020;
@@ -171,7 +175,7 @@ img {
 
 /* support */
 .supp {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 /* movies & shows hero section */
@@ -234,13 +238,7 @@ img {
   border-radius: 20px;
   overflow: hidden;
 }
-/* img {
-  height: auto;
-  max-width: 100%;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-} */
+
 
 .movie-card-small:hover .video-play-btn {
   visibility: visible;
@@ -760,13 +758,13 @@ img {
   background-color: #2d2b3d;
   cursor: pointer;
   border-radius: 0.5rem;
-  padding: 1px 11.5px;
+  padding: 0px 10px;
   text-decoration: none;
 }
 
 .back-to-top span {
   color: #fff;
-  font-size: 3rem;
+  font-size: 40px;
   transition: 0.2s ease-out;
 }
 .back-to-top:hover {
@@ -785,4 +783,32 @@ img {
 }
 .back-to-top:hover span {
   transform: translateY(-4px);
+}
+
+/* extra section */
+.thirdCard {
+  width: 335px;
+  height: 270px;
+  background-color: #1b1b1b;
+  color: white;
+  padding: 50px 15px 35px 15px;
+  background-color: transparent;
+  background-image: linear-gradient(136deg, #1b1b1b 0%, #1b1b1b 100%);
+  border-radius: 30px 30px 30px 30px;
+}
+
+.thirdCard:hover {
+  box-shadow: 0px 7px 15px rgba(255, 255, 255, 0.07);
+}
+.thirdCardImg {
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition-duration: 0.4s;
+}
+
+.thirdCard:hover .thirdCardImg {
+  transform: scale(1.2);
 }

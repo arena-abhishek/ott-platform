@@ -891,6 +891,7 @@ img {
   border-radius: 50%;
   border: 6px solid;
   transition: 0.5s;
+  transition-delay: 0.2s;
 }
 .navigationMobile ul li:nth-child(1).active ~ .indicator {
   transform: translateX(calc(70px * 0));

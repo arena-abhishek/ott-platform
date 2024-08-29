@@ -339,6 +339,30 @@ let content4 = `
 myMobileNavigation = makeElement("section", "", "", "", content4);
 mobileNavigation.append(myMobileNavigation);
 
+/*mobile navigation   */
+
+$(document).ready(function () {
+  // Add event listener to navigation links
+  $(".navigationMobile ul li a").on("click", function (e) {
+    e.preventDefault();
+    var href = $(this).attr("href"); // Get the href attribute of the link
+    console.log("Click event triggered");
+    // Remove active class from all list items
+    $(".navigationMobile ul li").removeClass("active");
+    // Add active class to the clicked list item
+    $(this).parent().addClass("active");
+    // Load new page content using AJAX
+    $.ajax({
+      url: href,
+      success: function (data) {
+        // Update the page content
+        $("#content").html(data);
+        // Update the URL in the browser's address bar
+        history.pushState({}, "", href);
+      },
+    });
+  });
+});
 /* search result */
 
 $(document).ready(function () {

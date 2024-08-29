@@ -1,0 +1,81 @@
+.pricing-table {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* max-width: 900px; */
+  overflow: hidden;
+  color: #999;
+  border: 1px solid #eeeeee23;
+}
+.pricing-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pricing-table th,
+.pricing-table td {
+  padding: 22px;
+  text-align: left;
+  width: 0px;
+  border: 1px solid #eeeeee23;
+}
+.pricing-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+.pricing-table .plan {
+  text-align: center;
+  padding: 20px;
+}
+.pricing-table .plan h2 {
+  margin-bottom: 10px;
+}
+.pricing-table .plan .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.pricing-table .plan .price span {
+  font-size: 16px;
+  color: #777;
+}
+.pricing-table .plan .features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.pricing-table .plan .features li {
+  padding: 5px 0;
+}
+/* .pricing-table .plan .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 20px;
+} */
+/* Responsive Design */
+
+.pricing-table-mobile {
+  border: 1px solid #eeeeee23;
+  border-radius: 10px;
+  margin-left: 11px;
+}
+
+.pricing-table-mobile table {
+  color: #eeeeeee1;
+  width:100vw ;
+}
+.txt-cl {
+  color: #999;
+}
+.pricing-table-mobile td {
+  padding: 22px;
+  text-align: left;
+  width: 0px;
+}
+.pricing-table-mobile tr {
+  width: 100%;
+}

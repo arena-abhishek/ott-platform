@@ -6,11 +6,12 @@
     <title>Subscription page</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styleExtra.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/extraSection.js" defer></script>
     <script src="assets/js/priceCard.js" defer></script>
@@ -38,22 +39,19 @@
               </div>
             </div>
             <div
-              class="col-12 col-lg-4 d-flex justify-content-start justify-content-sm-end align-items-center"
-            >
+              class="col-12 col-lg-4 d-flex justify-content-start justify-content-sm-end align-items-center">
               <div class="rounded px-2 py-2" style="background-color: #0f0f0f">
                 <button class="border-0 btn1 py-2 px-4 text-white rounded-3">
                   Monthly
                 </button>
                 <button
-                  class="border-0 btn2 ms-3 py-2 px-4 text-white rounded-3"
-                >
+                  class="border-0 btn2 ms-3 py-2 px-4 text-white rounded-3">
                   Yearly
                 </button>
               </div>
             </div>
           </div>
           <div class="row mt-4" id="pricecard">
-            <!-- <script src="assets/js/priceCard.js"></script> -->
           </div>
         </div>
       </section>
@@ -63,16 +61,199 @@
       <div class="row mb-5">
         <h2 class="text-white">FLEEK IS OFFERS SUPERIOR LIVE TV STREAMING</h2>
       </div>
-      <div class="row g-5" id="third-card"></div>
+      <div class="row g-5 flex-wrap" id="third-card"></div>
+    </div>
+    <!-- another extra section -->
+    <div class="container-xxl  " style="margin-top: 150px">
+      <div class="row">
+        <div class="col mb-5">
+          <div class="row mb-2">
+            <h1 class="text-white">
+              Compare our plans and find the right one for you
+            </h1>
+          </div>
+          <div class="row mb-3 mb-sm-0">
+            <h6 style="color: #999">
+              Fleek offers three different plans to fit your needs: Basic,
+              Standard, and Premium. Compare the features of each plan and
+              choose the one that's right for you.
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-table d-none d-sm-block">
+        <table>
+          <thead>
+            <tr class="text-white">
+              <th style="background-color: #1b192d;">Features</th>
+              <th style="background-color: #1b192d;">Basic</th>
+              <th style="background-color: #1b192d;">Standard
+                <span class=" ms-2 pop p-2 btn-base rounded "
+                  style="font-size: 10px;">Popular</span>
+              </th>
+              <th style="background-color: #1b192d;">Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td>$9.99/Month</td>
+              <td>$12.99/Month</td>
+              <td>$14.99/Month</td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td>
+                Access to a wide selection of movies and shows, including some
+                new releases.
+              </td>
+              <td>
+                Access to a wider selection of movies and shows, including
+                most new releases and exclusive content
+              </td>
+              <td>
+                Access to a widest selection of movies and shows, including
+                all new releases and Offline Viewing
+              </td>
+            </tr>
+            <tr>
+              <td>Devices</td>
+              <td>Watch on one device simultaneously</td>
+              <td>Watch on Two device simultaneously</td>
+              <td>Watch on Four device simultaneously</td>
+            </tr>
+            <tr>
+              <td>Free Trail</td>
+              <td>7 Days</td>
+              <td>7 Days</td>
+              <td>7 Days</td>
+            </tr>
+            <tr>
+              <td>Cancel Anytime</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>HDR</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Dolby Atmos</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Ad - Free</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Offline Viewing</td>
+              <td>No</td>
+              <td>Yes, for select titles.</td>
+              <td>Yes, for all titles.</td>
+            </tr>
+            <tr>
+              <td>Family Sharing</td>
+              <td>No</td>
+              <td>Yes, up to 5 family members.</td>
+              <td>Yes, up to 6 family members.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center flex-column  d-block d-sm-none ">
+
+      <!-- btns -->
+      <div
+        class=" d-flex align-items-center justify-content-center justify-content-sm-start vw-100"
+        style="height: 100px; margin-top: 65px; margin-left: 13px;">
+        <div
+          class="p-1 text-white btn-base fw-500 rounded-2 d-flex gap-1 mx-0 mx-sm-4">
+          <div
+            class="border-0 px-4 py-2 text-white  fw-500 rounded-2 mov"
+            style="cursor: pointer">
+            Basic
+          </div>
+          <div
+            class="border-0 px-4 py-2 bg-dark text-white fw-500 rounded-2 sho"
+            style="cursor: pointer">
+            Standard
+          </div>
+          <div
+            class="border-0 px-4 py-2 text-white fw-500 rounded-2 sho"
+            style="cursor: pointer">
+            Premium
+          </div>
+        </div>
+      </div>
+      <div class="pricing-table-mobile  ">
+        <table>
+          <tbody>
+            <tr class="txt-cl">
+              <td class="txt-br-left">Price</td>
+              <td class="txt-br-right">Free trial</td>
+            </tr>
+            <tr>
+              <td>99/Month</td>
+              <td>7 days</td>
+            </tr>
+            <tr class="txt-cl">
+              <td colspan="2">Content</td>
+            </tr>
+            <tr>
+              <td colspan="2">Access to a wider selection of movies and shows,
+                including
+                most new releases and exclusive content</td>
+            </tr>
+            <tr class="txt-cl">
+              <td colspan="2">Devices</td>
+            </tr>
+            <tr>
+              <td colspan="2">Watch on Two device simultaneously</td>
+            </tr>
+            <tr class="txt-cl">
+              <td>Cancel Anytime</td>
+              <td>HDR</td>
+            </tr>
+            <tr>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr class="txt-cl">
+              <td>Dolby Atmos</td>
+              <td>Ad-free</td>
+            </tr>
+            <tr>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr class="txt-cl">
+              <td>Offline viewing</td>
+              <td>Family sharing</td>
+            </tr>
+            <tr>
+              <td>Yes, for select titles.</td>
+              <td>5 family members</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
     </div>
     <!-- subscription -->
     <div class="subs"></div>
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
     <div class="bottom-To-Top">
-      <a href="#" class="back-to-top"
-        ><span><i class="bi bi-arrow-up-short"></i></span
-      ></a>
+      <a href="#" class="back-to-top"><span><i
+            class="bi bi-arrow-up-short"></i></span></a>
     </div>
     <div class="bg-navItems d-block d-sm-none"></div>
   </body>

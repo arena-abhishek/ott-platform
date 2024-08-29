@@ -81,6 +81,8 @@ const showMedia = (data, containerSelector, isTV) => {
         .join(", ");
       const cardElement = document.createElement("div");
       cardElement.classList.add("swiper-slide");
+      cardElement.classList.add("swiper-slide-custom");
+      // cardElement.style.width="300px";
       cardElement.innerHTML = `
       <div
       class="movie-card-small position-relative"

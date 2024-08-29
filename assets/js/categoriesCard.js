@@ -34,6 +34,7 @@ const showMovies_img = async (data, genreList) => {
 
       const catCardElement = document.createElement("div");
       catCardElement.classList.add("swiper-slide");
+      catCardElement.classList.add("swiper-slide-custom");
       catCardElement.innerHTML = `  
         <div class="category-card">
               <!-- Thumbnail -->

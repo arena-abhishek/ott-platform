@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {});
 
 let header = document.querySelector(".header");
 let content1 = `
-  <div class="container-xxl">
+ 
     <nav class=" navbar-expand-lg navbar-dark bg-transparent">
       <div class=" row gap-0 py-sm-1 d-flex align-items-center" >
         <div
           class="col-6 col-md-6 col-lg-2 d-flex justify-content-center justify-content-sm-start align-content-center">
           <!-- logo -->
           <a class="navbar-brand" href="#"><img
-              src="assets/img/logo.png"
+              src="/assets/img/logo.png"
               alt="logo"
               width="114" height="114" />
    
@@ -48,23 +48,23 @@ let content1 = `
                   <a
                     class="h4 nav-link py-3 px-4 rounded d-inline-block "
                     aria-current="page"
-                    href="index.html">Home</a>
+                    href="/index.html">Home</a>
                 </li>
                 <li class="nav-item navItems rounded ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="movies&shows.html">Movies <span>&</span>
+                    href="/movies&shows.html">Movies <span>&</span>
                     Shows</a>
                 </li>
                 <li class="nav-item navItems rounded  ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="support.html  ">Support</a>
+                    href="/support.html  ">Support</a>
                 </li>
                 <li class="nav-item navItems rounded  ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="subscription.html">Subscription</a>
+                    href="/subscription.html">Subscription</a>
                 </li>
               </ul>
             </div>
@@ -82,7 +82,8 @@ let content1 = `
                     placeholder="search movie and series "
                     autofocus
                     autocomplete="off"
-                    class="py-1 px-2 position-absolute rounded-3 form-control searchInput"
+                    class="py-1 px-2 position-absolute rounded-3 form-control"
+                    id="searchInput"
                   />
                 </div>
             <a
@@ -93,25 +94,89 @@ let content1 = `
         </div>
         <div
           class="col-6 col-lg-0 d-block d-lg-none d-flex justify-content-end">
-          <!-- mobile search -->
-            <div class="row searchIcon text-white" style="cursor: pointer">
-                  <i class="bi bi-search" style="font-size: x-large"></i>
-                  <input
-                    type="search"
-                    placeholder="search movie and series "
-                    autofocus
-                    autocomplete="off"
-                    class="py-1 px-2 position-absolute rounded-3 form-control searchInput"
-                  />
-                </div>   
+          <!-- toggle btn -->
+          <button
+            class="navbar-toggler shadow-none border-0 d-block d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
       </div>
+      <div class="row d-block d-lg-none">
+        <!-- sidebar -->
+        <div
+          class="sidebar offcanvas offcanvas-start d-block d-lg-none"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          style=" background-color: #15141f;">
+          <!-- sidebar header -->
+          <div class="offcanvas-header text-white p-2">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="/assets/img/logo.png" alt="logo" width="114" height="114" />
+            </h5>
+  
+            <button
+              type="button"
+              class="btn-close btn-close-white shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div
+            class="row mt-4"
+            style="
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(
+                  90deg,
+                  rgba(52, 48, 135, 0) 0%,
+                  rgba(52, 48, 135, 1) 17%,
+                  rgba(52, 48, 135, 0) 100%
+                );
+              "></div>
+          <div
+            class="offcanvas-body d-flex flex-column align-items-start">
+            <ul
+              class="navbar-nav d-block d-lg-none fs-5 flex-grow-1 pe-3 rounded">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page"
+                  href="/index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="/movies&shows.html">Movies</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="/support.html">Support</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="/subscription.html">Subscription</a>
+              </li>
+            </ul>
+          </div>
+          <!-- search & notification -->
+          <!-- 
+          <div class="d-flex justify-content-end align-items-center gap-3">
+            <a href="#search" class="text-white" style="font-size: 25px"
+              ><i class="bi bi-search"></i
+            ></a>
+            <a
+              href="#notificationIcon"
+              class="text-white"
+              style="font-size: 25px"
+              ><i class="bi bi-bell"></i
+            ></a>
+          </div>
+  -->
         </div>
       </div>
     </nav>
-  </div>
+
   <div  id="searchPanel">
-        <div class="mainCardApi container-fluid z-1">
+        <div class="mainCardApi container-xxl z-1">
           <div
             class="row d-flex flex-row justify-content-between"
             id="movie-box"
@@ -119,7 +184,7 @@ let content1 = `
         </div> 
       </div>
 `;
-myHeader = makeElement("header", "container-fluid", "", "", content1);
+myHeader = makeElement("div", "container-xxl", "", "", content1);
 header.append(myHeader);
 
 let footer = document.querySelector(".footer");
@@ -277,7 +342,7 @@ let content3 = `<div class="container-xxl rounded-4 position-relative" id="subIm
     </div>
     <div class="col d-flex justify-content-center justify-content-sm-end">
       <a
-        href="#"
+        href="subscription.html"
         class="text-white btn-base fw-5 h-6 text-center py-2 py-sm-3 px-3 px-sm-4 rounded-2"
         style="
           text-decoration: none;
@@ -291,79 +356,6 @@ let content3 = `<div class="container-xxl rounded-4 position-relative" id="subIm
 </div>`;
 mySubscription = makeElement("section", "container-fluid", "", "", content3);
 subscription.append(mySubscription);
-
-let mobileNavigation = document.querySelector(".bg-navItems");
-let content4 = `
-<div class="navigationMobile">
-        <ul>
-          <li class="list active">
-            <a href="index.html">
-              <span class="icon">
-                <i class="bi bi-house-door"></i>
-              </span>
-              <span class="text">Home</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="movies&shows.html">
-              <span class="icon">
-                <img src="assets/icons/watch.svg" alt="" />
-              </span>
-              <span class="text">Profile</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="support.html">
-              <span class="icon">
-                <img
-                  src="assets/icons/support.svg"
-                  alt=""
-                  height="32px"
-                  width="32px"
-                />
-              </span>
-              <span class="text">Photos</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="subscription.html">
-              <span class="icon">
-                <img src="assets/icons/subscription.svg" alt="" />
-              </span>
-              <span class="text">Settings</span>
-            </a>
-          </li>
-          <div class="indicator"></div>
-        </ul>
-      </div>`;
-myMobileNavigation = makeElement("section", "", "", "", content4);
-mobileNavigation.append(myMobileNavigation);
-
-/*mobile navigation   */
-
-$(document).ready(function () {
-  // Add event listener to navigation links
-  $(".navigationMobile ul li a").on("click", function (e) {
-    e.preventDefault();
-    var href = $(this).attr("href"); // Get the href attribute of the link
-    console.log("Click event triggered");
-    // Remove active class from all list items
-    $(".navigationMobile ul li").removeClass("active");
-    // Add active class to the clicked list item
-    $(this).parent().addClass("active");
-    // Load new page content using AJAX
-    $.ajax({
-      url: href,
-      success: function (data) {
-        // Update the page content
-        $("#content").html(data);
-        // Update the URL in the browser's address bar
-        history.pushState({}, "", href);
-      },
-    });
-  });
-});
-/* search result */
 
 $(document).ready(function () {
   /* show details  */
@@ -393,12 +385,10 @@ $(document).ready(function () {
   });
 });
 
-/* navigation bar  */
-
 /* search icon */
 
 $(document).ready(function () {
-  $(".searchInput").hide();
+  $("#searchInput").hide();
   $("#searchPanel").hide();
 
   $(".searchIcon").on("click", function () {
@@ -417,7 +407,7 @@ $(document).ready(function () {
           },
         }
       );
-    $(".searchInput").animate(
+    $("#searchInput").animate(
       {
         width: "toggle",
         opacity: "toggle",

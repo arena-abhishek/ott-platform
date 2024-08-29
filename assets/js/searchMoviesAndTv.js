@@ -108,7 +108,7 @@ const showMovies = (data) => {
 };
 
 document
-  .querySelector(".searchInput")
+  .querySelector("#searchInput")
   .addEventListener("keyup", function (event) {
     if (event.target.value != "") {
       getMovies(SEARCHAPI + event.target.value);

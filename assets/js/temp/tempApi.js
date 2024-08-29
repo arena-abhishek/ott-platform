@@ -181,7 +181,6 @@ getMedia(UPCOMING_TV_API, ".upcoming-tv-cards", true); // new TV releases
 $(document).ready(function () {
   // Initialize desktop Swiper
   var swiper = new Swiper(".mySwiper", {
-    loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
     autoplay: {
@@ -210,7 +209,6 @@ $(document).ready(function () {
 
   // Initialize mobile Swiper
   var swiperMobile = new Swiper(".mySwiperMobile", {
-    loop: true,
     effect: "cards",
     grabCursor: true,
     autoplay: {

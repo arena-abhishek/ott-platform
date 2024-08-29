@@ -1,0 +1,54 @@
+let mobileNavigation = document.querySelector(".bg-navItems"); let content4 = `
+<div class="navigationMobile">
+  <ul>
+    <li class="list active">
+      <a href="index.html">
+        <span class="icon">
+          <i class="bi bi-house-door"></i>
+        </span>
+        <span class="text">Home</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="movies&shows.html">
+        <span class="icon">
+          <img src="assets/icons/watch.svg" alt="" />
+        </span>
+        <span class="text">Profile</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="support.html">
+        <span class="icon">
+          <img
+            src="assets/icons/support.svg"
+            alt=""
+            height="32px"
+            width="32px"
+          />
+        </span>
+        <span class="text">Photos</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="subscription.html">
+        <span class="icon">
+          <img src="assets/icons/subscription.svg" alt="" />
+        </span>
+        <span class="text">Settings</span>
+      </a>
+    </li>
+    <div class="indicator"></div>
+  </ul>
+</div>
+`; myMobileNavigation = makeElement("section", "", "", "", content4);
+mobileNavigation.append(myMobileNavigation); */ /*mobile navigation 
+$(document).ready(function () { // Add event listener to navigation links
+$(".navigationMobile ul li a").on("click", function (e) { e.preventDefault();
+var href = $(this).attr("href"); // Get the href attribute of the link
+console.log("Click event triggered"); // Remove active class from all list items
+$(".navigationMobile ul li").removeClass("active"); // Add active class to the
+clicked list item $(this).parent().addClass("active"); // Load new page content
+using AJAX $.ajax({ url: href, success: function (data) { // Update the page
+content $("#content").html(data); // Update the URL in the browser's address bar
+history.pushState({}, "", href); }, }); }); }); */ /* search result */

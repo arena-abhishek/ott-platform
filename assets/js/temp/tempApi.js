@@ -1,4 +1,4 @@
- /* show movies */
+/* show movies */
 const MOVIE_URL =
   "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
@@ -81,6 +81,7 @@ const showMedia = (data, containerSelector, isTV) => {
         .join(", ");
       const cardElement = document.createElement("div");
       cardElement.classList.add("swiper-slide");
+      cardElement.classList.add("swiper-slide-custom");
       cardElement.innerHTML = `
       <div
       class="movie-card-small position-relative"
@@ -217,7 +218,6 @@ $(document).ready(function () {
     },
   });
 });
-
 
 $(document).ready(function () {
   // Hide the "Shows" section by default

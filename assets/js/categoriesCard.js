@@ -49,7 +49,11 @@ const showMovies_img = async (data, genreList) => {
               <!-- Details -->
               <div class="catdetails">
                 <h4 class="title lh-1 mb-0">${genreNames}</h4>
+<<<<<<< HEAD
                <a href="index.html" class="hl-btn cat-circle-btn d-flex justify-content-center align-items-center flex-shrink-0">
+=======
+                <a href="index.html" class="hl-btn cat-circle-btn d-flex justify-content-center align-items-center flex-shrink-0">
+>>>>>>> b07877357fa810130cb7bd1d0103eacc378d5e6c
           <i class="bi bi-arrow-right" style="font-size:22px;"></i>
                 </a>
               </div>

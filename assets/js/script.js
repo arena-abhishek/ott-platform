@@ -53,18 +53,18 @@ let content1 = `
                 <li class="nav-item navItems rounded ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="/movies&shows.html">Movies <span>&</span>
+                    href="movies&shows.html">Movies <span>&</span>
                     Shows</a>
                 </li>
                 <li class="nav-item navItems rounded  ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="/support.html  ">Support</a>
+                    href="support.html  ">Support</a>
                 </li>
                 <li class="nav-item navItems rounded  ">
                   <a
                     class="h4 nav-link py-3 px-4 rounded"
-                    href="/subscription.html">Subscription</a>
+                    href="subscription.html">Subscription</a>
                 </li>
               </ul>
             </div>
@@ -147,13 +147,13 @@ let content1 = `
                   href="index.html">Home</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="/movies&shows.html">Movies</a>
+                <a class="nav-link" href="movies&shows.html">Movies</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="/support.html">Support</a>
+                <a class="nav-link" href="support.html">Support</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="/subscription.html">Subscription</a>
+                <a class="nav-link" href="subscription.html">Subscription</a>
               </li>
             </ul>
           </div>

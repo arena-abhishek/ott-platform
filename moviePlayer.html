@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies player</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/videoplayer.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
@@ -18,6 +23,7 @@
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/m&sPlayer.js" defer></script>
     <script src="assets/js/temp/tempApi.js" defer></script>
+    <script src="assets/js/videoPlayer.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/searchMoviesAndTv.js" defer></script>
   </head>
@@ -25,52 +31,41 @@
     <!-- navigation bar -->
     <div class="header"></div>
     <!-- hero section -->
-    <div class="container-xxl">
-      <div class="card mt-5 rounded-5 border-0">
-        <img
-          src="assets/img/moviePcPoster.png"
-          alt=""
-          class="card-img rounded-4 d-none d-sm-block"
-        />
-        <img
-          src="assets/img/movieMobilePoster.png"
-          alt=""
-          class="card-img rounded-4 d-block d-sm-none"
-        />
-        <div
-          class="card-img-overlay rounded-3 d-flex flex-column justify-content-end align-items-center"
-          style="
-            background: linear-gradient(
-              360deg,
-              rgba(20, 20, 20, 1) 0%,
-              rgba(20, 20, 20, 0) 100%
-            );
-          "
-        >
-          <div
-            class="playerSectionTxt d-flex flex-column justify-content-center align-items-center gap-4 gap-sm-1"
-          >
-            <h1 class="display-5" style="color: #fff">Kantara</h1>
-            <p class="d-none d-lg-block" style="color: #999">
-              A fiery young man clashes with an unflinching forest officer in a
-              south Indian village where spirituality, fate and folklore rule
-              the lands.
-            </p>
-            <div class="text-center">
-              <button
-                class="border-0 btn-base rounded py-1 py-sm-2 px-3 px-sm-4"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Play now</span>
-              </button>
-              <button
-                class="ms-0 ms-sm-4 btn-base border-0 rounded py-1 py-sm-2 px-3 px-sm-4"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Watch Trailer</span>
-              </button>
-            </div>
-          </div>
+    <div class="container-xxl mt-5">
+    
+      <div class="player">
+        <video
+          class="player__video viewer"
+          src="assets/video/trailer.mp4"
+        ></video>
+
+        <div class="player__controls">
+          <div class="progress"><div class="progress__filled"></div></div>
+
+          <button class="player__button toggle" title="Toggle Play">►</button>
+          <input
+            type="range"
+            name="volume"
+            class="player__slider input-slider"
+            min="0"
+            max="1"
+            step="0.05"
+            value="1"
+          />
+          <input
+            type="range"
+            name="playbackrate"
+            class="player__slider input-slider"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value="1"
+          />
+          <button data-skip="-10" class="player__button">« 10s</button>
+          <button data-skip="25" class="player__button">25s »</button>
+          <button class="player__button toggleScreen">
+            <i class="bi bi-fullscreen"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -210,7 +205,7 @@
     <div class="subs"></div>
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
-    <div class="bottom-To-Top">
+    <div class="bottom-To-Top z-5">
       <a href="#" class="back-to-top"
         ><span><i class="bi bi-arrow-up-short"></i></span
       ></a>

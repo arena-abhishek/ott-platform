@@ -121,6 +121,7 @@ let content1 = `
             </h5>
   
             <button
+            style="margin-right:18px"
               type="button"
               class="btn-close btn-close-white shadow-none"
               data-bs-dismiss="offcanvas"

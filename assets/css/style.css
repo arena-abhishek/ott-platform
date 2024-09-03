@@ -5,7 +5,7 @@ html {
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   font-family: "Helvetica Neue", sans-serif;
 }
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"); */
@@ -727,97 +727,5 @@ img {
 .swiper-slide-custom {
   width: 300px !important;
   margin-right: 30px !important;
-} /* .navigationMobile {
-  width: 100%;
-  height: 70px;
-  background: #15141f;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px 10px 0px 0px;
-}
-.navigationMobile ul {
-  display: flex;
-  margin-bottom: 0px;
-  padding-left: 0px;
-}
-.navigationMobile ul li {
-  position: relative;
-  list-style: none;
-  width: 70px;
-  height: 70px;
-  z-index: 1;
-}
-.navigationMobile ul li a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  font-weight: 500;
-}
-.navigationMobile ul li a .icon {
-  position: relative;
-  display: block;
-  line-height: 75px;
-  font-size: 1.5rem;
-  text-align: center;
-  transition: 0.5s;
-  color: #eee;
-}
-.navigationMobile ul li.active a .icon {
-  transform: translateY(-32px);
-}
-.navigationMobile ul li a .text {
-  position: absolute;
-  color: #eee;
-  font-weight: 400;
-  font-size: 0.75em;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-  opacity: 0;
-  transform: translateY(20px);
-}
-.navigationMobile ul li.active a .text {
-  transform: translateY(10px);
-  opacity: 1;
-}
-.indicator {
-  position: absolute;
-  top: -50%;
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(92deg, #5a0dff 0%, #ff29b8 38.6%, #ff581c 97.73%);
-  border-radius: 50%;
-  border: 6px solid;
-  transition: 0.5s;
-  transition-delay: 0.2s;
-}
-.navigationMobile ul li:nth-child(1).active ~ .indicator {
-  transform: translateX(calc(70px * 0));
-}
-.navigationMobile ul li:nth-child(2).active ~ .indicator {
-  transform: translateX(calc(70px * 1));
-}
-.navigationMobile ul li:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(70px * 2));
-}
-.navigationMobile ul li:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(70px * 3));
-}
-.navigationMobile ul li:nth-child(5).active ~ .indicator {
-  transform: translateX(calc(70px * 4));
-}
-:root {
-  --clr: #222327;
-}.bg-navItems {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 1000;
-}
- */
+} 
+

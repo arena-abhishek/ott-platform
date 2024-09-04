@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shows player</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/videoplayer.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
+      defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <script src="assets/js/temp/tempApi.js" defer></script>
     <script src="assets/js/m&sPlayer.js" defer></script>
     <script src="assets/js/script.js" defer></script>
@@ -25,54 +27,27 @@
     <!-- navigation bar -->
     <div class="header"></div>
     <!-- hero section -->
-    <div class="container-xxl">
-      <div class="card mt-5 rounded-5 border-0">
-        <img
-          src="assets/img/showsPcPoster.png"
-          alt=""
-          class="card-img rounded-4 d-none d-sm-block"
-        />
-        <img
-          src="assets/img/showsMobilePoster.png"
-          alt=""
-          class="card-img rounded-4 d-block d-sm-none"
-        />
-        <div
-          class="card-img-overlay rounded-3 d-flex flex-column justify-content-end align-items-center"
-          style="
-            background: linear-gradient(
-              360deg,
-              rgba(20, 20, 20, 1) 0%,
-              rgba(20, 20, 20, 0) 100%
-            );
-          "
-        >
-          <div
-            class="playerSectionTxt d-flex flex-column justify-content-center align-items-center gap-4 gap-sm-1"
-          >
-            <h1 class="display-5" style="color: #fff">Stranger Things</h1>
-            <p class="d-none d-lg-block" style="color: #999">
-              A fiery young man clashes with an unflinching forest officer in a
-              south Indian village where spirituality, fate and folklore rule
-              the lands.
-            </p>
-            <div class="text-center">
-              <button
-                class="border-0 btn-base rounded py-1 py-sm-2 px-3 px-sm-4"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Play now</span>
-              </button>
-              <button
-                class="ms-0 ms-sm-4 btn-base border-0 rounded py-1 py-sm-2 px-3 px-sm-4"
-              >
-                <i class="bi bi-play-fill text-white"></i>
-                <span class="text-white fw-semibold">Watch Trailer</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container-xxl mt-5">
+      <video
+        id="my-video"
+        class="video-js"
+        controls
+        preload="auto"
+        autoplay
+        width="640"
+        height="264"
+        poster="assets/img/moviePcPoste.jpeg"
+        data-setup="{}">
+        <source src="assets/video/trailer.mp4" type="video/mp4" />
+        <source src="MY_VIDEO.webm" type="video/webm" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to
+          a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/"
+            target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
     </div>
     <!-- shows detail -->
     <div class="showsDetail">
@@ -83,11 +58,9 @@
     <!-- button -->
     <div
       class="container-xxl d-flex align-items-center justify-content-center justify-content-sm-start"
-      style="height: 100px; margin-top: 65px"
-    >
+      style="height: 100px; margin-top: 65px">
       <div
-        class="pt-1 text-white btn-base fw-500 rounded-2 d-flex gap-1 mx-0 mx-sm-4"
-      >
+        class="pt-1 text-white btn-base fw-500 rounded-2 d-flex gap-1 mx-0 mx-sm-4">
         <div class="border-0 px-4 py-2 text-white fw-500 h5 rounded-2">
           Similar Titles
         </div>
@@ -110,9 +83,8 @@
     <!-- footer -->
     <div class="footer container-fluid" style="background-color: #161616"></div>
     <div class="bottom-To-Top">
-      <a href="#" class="back-to-top"
-        ><span><i class="bi bi-arrow-up-short"></i></span
-      ></a>
+      <a href="#" class="back-to-top"><span><i
+            class="bi bi-arrow-up-short"></i></span></a>
     </div>
     <!-- <div class="bg-navItems d-block d-sm-none"></div> -->
   </body>

@@ -184,10 +184,7 @@ $(document).ready(function () {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    autoplay: false,
     breakpoints: {
       640: {
         slidesPerView: 1,
@@ -212,10 +209,7 @@ $(document).ready(function () {
   var swiperMobile = new Swiper(".mySwiperMobile", {
     effect: "cards",
     grabCursor: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    autoplay: false,
   });
 });
 

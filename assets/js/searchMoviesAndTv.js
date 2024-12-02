@@ -73,28 +73,16 @@ const showMovies = (data) => {
         </h4>
         <ul class="movie-info p-0">
           <li>
-            <img
-              decoding="async"
-              src="https://holaa.codexshaper.com/wp/wp-content/themes/holaa/assets/images/icons/star-stroke.svg"
-              alt="Rating"
-            />
+            <i class="bi bi-star  text-white"></i>
             <span>${result.vote_average}</span>
           </li>
           <li>
-            <img
-              decoding="async"
-              src="https://holaa.codexshaper.com/wp/wp-content/themes/holaa/assets/images/icons/clock-stroke.svg"
-              alt="Duration"
-            />
+              <i class="bi bi-clock-history ms-1 text-white"></i>
             <span>03h 10m</span>
           </li>
           <li>
-            <img
-              decoding="async"
-              src="https://holaa.codexshaper.com/wp/wp-content/themes/holaa/assets/images/icons/4k-stroke.svg"
-              alt="Quality"
-            />
-            <span>4k Quality</span>
+             <i class="bi bi-badge-4k ms-1  text-white"></i>
+            <span> Quality</span>
           </li>
         </ul>
         <ul class="movie-type " style="margin-right: 18px;">

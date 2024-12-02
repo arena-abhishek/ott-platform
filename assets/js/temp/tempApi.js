@@ -31,6 +31,9 @@ const GENRE_API =
 const GENRE_TV_API =
   "https://api.themoviedb.org/3/genre/tv/list?language=en&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
+const runtime_movie = "https://api.themoviedb.org/3/movie?language=en-Us&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+const runtime_tv = "https://api.themoviedb.org/3/tv?language=en-Us&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+
 let genreMap = {};
 let tvGenreMap = {};
 
@@ -123,27 +126,15 @@ const showMedia = (data, containerSelector, isTV) => {
         </h4>
         <ul class="movie-info p-0">
           <li>
-            <img
-              decoding="async"
-              src="https://holaa.codexshaper.com/wp/wp-content/themes/holaa/assets/images/icons/star-stroke.svg"
-              alt="Rating"
-            />
+             <i class="bi bi-star ms-1 text-white"></i>
             <span>${result.vote_average}</span>
           </li>
           <li>
-            <img
-              decoding="async"
-              src="https://holaa.codexshaper.com/wp/wp-content/themes/holaa/assets/images/icons/clock-stroke.svg"
-              alt="Duration"
-            />
+                <i class="bi bi-clock-history ms-1 text-white"></i>
             <span>03h 10m</span>
           </li>
           <li>
-            <img
-              decoding="async"
-              src="https://holaa.codexshaper.com/wp/wp-content/themes/holaa/assets/images/icons/4k-stroke.svg"
-              alt="Quality"
-            />
+              <i class="bi bi-badge-4k ms-1 text-white"></i>
             <span>4k Quality</span>
           </li>
         </ul>

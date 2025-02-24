@@ -306,7 +306,7 @@ a:active {
 .movie-card-small .details ul li {
   display: inline-block;
 }
- /*  custom scrollbar  */
+/*  custom scrollbar  */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -364,7 +364,7 @@ a:active {
   transition: all 0.4s ease-in-out;
   box-shadow: 0px 0px 20px rgba(255, 53, 144, 0.5);
 }
- /* btn gradeint */
+/* btn gradeint */
 .btn-base {
   background-image: linear-gradient(
     to right,
@@ -650,20 +650,44 @@ img {
   border-radius: 0;
   box-shadow: none;
 }
+/* Default styles (for mobile-first, e.g., small screens) */
 .categories {
-  margin-top: 82%;
+  margin-top: 82%; /* Large margin for small screens */
 }
- 
+
+/* Tablet-sized screens (min-width: 574px) */
 @media (min-width: 574px) {
   .categories {
-    margin-top: 32%;
+    margin-top: 32%; /* Smaller margin for tablets */
+  }
+
+  /* Laptops / small desktops (min-width: 800px) */
+  @media (min-width: 800px) {
+    .categories {
+      margin-top: 23%; /* Even smaller margin for laptops */
+    }
+  }
+
+  /* Desktops / large screens (min-width: 1000px) */
+  @media (min-width: 1000px) {
+    .categories {
+      margin-top: 25%; /* Minor margin for larger screens */
+    }
+  }
+  @media (min-width: 1300px) {
+    .categories {
+      margin-top: 23%; /* Minor margin for larger screens */
+    }
+  }
+
+  /* Extra large screens (optional for huge displays, min-width: 1200px) */
+  @media (min-width: 1500px) {
+    .categories {
+      margin-top: 13%; /* Even smaller margin for very large screens */
+    }
   }
 }
-@media (min-width: 800px) {
-  .categories {
-    margin-top: 12%;
-  }
-} /* cards */
+/* cards */
 .series {
   display: none;
 } /* back to top button */
@@ -729,8 +753,8 @@ img {
 .swiper-slide-custom {
   width: 300px !important;
   margin-right: 30px !important;
-} 
+}
 
-.margin_top_first_section{
+.margin_top_first_section {
   margin-top: 10rem;
 }
